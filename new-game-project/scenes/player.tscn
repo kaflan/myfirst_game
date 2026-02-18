@@ -49,6 +49,7 @@ script = ExtResource("1_g2els")
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_rhr3r")
 animation = &"idle"
+autoplay = "idle"
 frame = 1
 frame_progress = 0.8596216
 
