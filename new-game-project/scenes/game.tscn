@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d30ebo7uakvax" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cgqpg3bl07ghk" path="res://scenes/platform.tscn" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://ckwm7iqr41hap" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dwod1c8k5hdse" path="res://scenes/coin.tscn" id="4_lbhrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -220,7 +221,7 @@ _data = {
 
 [node name="Player" parent="." unique_id=542468877 instance=ExtResource("1_uwrxv")]
 z_index = 10
-position = Vector2(-58, 12)
+position = Vector2(-136, 32)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=301541285]
 position = Vector2(58, -12)
@@ -239,3 +240,12 @@ position = Vector2(466, -12)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform2" unique_id=1485255559]
 libraries/ = SubResource("AnimationLibrary_iywne")
+
+[node name="Area2D" parent="." unique_id=1813176089 instance=ExtResource("4_lbhrr")]
+position = Vector2(-24, 27)
+
+[node name="Area2D2" parent="." unique_id=1336877647 instance=ExtResource("4_lbhrr")]
+position = Vector2(121, 26)
+
+[node name="Area2D3" parent="." unique_id=264551200 instance=ExtResource("4_lbhrr")]
+position = Vector2(58, 27)

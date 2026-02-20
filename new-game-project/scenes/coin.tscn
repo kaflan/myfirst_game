@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dwod1c8k5hdse"]
 
+[ext_resource type="Script" uid="uid://ct4g7jm2c2es4" path="res://scripts/coin.gd" id="1_i64fm"]
 [ext_resource type="Texture2D" uid="uid://b30r3u15pdkd3" path="res://assets/sprites/coin.png" id="1_rwqht"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0t63x"]
@@ -98,6 +99,7 @@ animations = [{
 }]
 
 [node name="Area2D" type="Area2D" unique_id=1813176089]
+script = ExtResource("1_i64fm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=687941034]
 shape = SubResource("CircleShape2D_0t63x")
@@ -105,4 +107,4 @@ shape = SubResource("CircleShape2D_0t63x")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=567343999]
 sprite_frames = SubResource("SpriteFrames_relgi")
 autoplay = "default"
-frame_progress = 0.7633822
+frame_progress = 0.5185297
