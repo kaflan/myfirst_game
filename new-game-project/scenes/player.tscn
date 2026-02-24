@@ -55,5 +55,6 @@ frame = 1
 frame_progress = 0.8596216
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=190670737]
+z_index = 5
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_t53lx")

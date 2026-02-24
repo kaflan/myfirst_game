@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cohiqpndtgam"]
+
+[ext_resource type="Script" uid="uid://bx3nhxx3pd8wi" path="res://scripts/enemy.gd" id="1_4ra3w"]
+[ext_resource type="Texture2D" uid="uid://cvxlgmveuihst" path="res://assets/sprites/slime_green.png" id="1_md0e3"]
+[ext_resource type="PackedScene" uid="uid://dtbloiovyv4d" path="res://scenes/kill_zone.tscn" id="2_4ra3w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uy6h"]
+atlas = ExtResource("1_md0e3")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4w8v"]
+atlas = ExtResource("1_md0e3")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwavj"]
+atlas = ExtResource("1_md0e3")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nenq2"]
+atlas = ExtResource("1_md0e3")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_md484"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5uy6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4w8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwavj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nenq2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md0e3"]
+
+[node name="Enemy" type="Node2D" unique_id=1292669453]
+script = ExtResource("1_4ra3w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=950906692]
+position = Vector2(0, -4)
+sprite_frames = SubResource("SpriteFrames_md484")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.7223863
+
+[node name="KillZone" parent="." unique_id=993395463 instance=ExtResource("2_4ra3w")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1645893]
+position = Vector2(0, 1)
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_md0e3")
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=571917028]
+rotation = 3.1415927
+target_position = Vector2(13, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=154157203]
+rotation = 4.712389
+target_position = Vector2(0, 13)
+
+[node name="RayCastRightDown" type="RayCast2D" parent="." unique_id=1694882476]
+position = Vector2(8, 0)
+rotation = -1.5707964
+target_position = Vector2(-8, 0)
+
+[node name="RayCastLeftDown" type="RayCast2D" parent="." unique_id=768701935]
+position = Vector2(-8, 0)
+rotation = -1.5707964
+target_position = Vector2(-8, 0)
