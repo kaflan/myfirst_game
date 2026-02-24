@@ -444,4 +444,5 @@ light_mask = 2
 shape = SubResource("WorldBoundaryShape2D_u5sy4")
 
 [node name="Enemy" parent="." unique_id=1292669453 instance=ExtResource("6_p57ef")]
+light_mask = 2
 position = Vector2(-72, 24)
