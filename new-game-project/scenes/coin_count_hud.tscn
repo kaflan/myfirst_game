@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://6q5kg361xnp1"]
+
+[ext_resource type="FontFile" uid="uid://njydc2e50off" path="res://assets/fonts/PixelOperator8.ttf" id="1_iufa3"]
+[ext_resource type="Texture2D" uid="uid://b30r3u15pdkd3" path="res://assets/sprites/coin.png" id="2_qmbfx"]
+
+[node name="coin_count_hud" type="CanvasLayer" unique_id=1394297499]
+
+[node name="CoinCount" type="Label" parent="." unique_id=2138386586]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = -0.104
+anchor_top = -0.049000002
+anchor_right = -0.104
+anchor_bottom = -0.049000002
+offset_left = -8.192001
+offset_top = -8.247999
+offset_right = 15.807999
+offset_bottom = 7.752001
+theme_override_colors/font_color = Color(0.13137859, 0.13137859, 0.13137859, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("1_iufa3")
+text = "0"
+
+[node name="CoinIcon" type="TextureRect" parent="." unique_id=1876046008]
+anchors_preset = -1
+anchor_left = -0.11800001
+anchor_top = -0.049000002
+anchor_right = -0.11800001
+anchor_bottom = -0.049000002
+offset_left = -8.063995
+offset_top = -8.247999
+offset_right = 7.9360046
+offset_bottom = 7.752001
+texture = ExtResource("2_qmbfx")
+expand_mode = 1
+stretch_mode = 1
