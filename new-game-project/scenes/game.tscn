@@ -9,6 +9,8 @@
 [ext_resource type="FontFile" uid="uid://njydc2e50off" path="res://assets/fonts/PixelOperator8.ttf" id="5_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://dtbloiovyv4d" path="res://scenes/kill_zone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://cohiqpndtgam" path="res://scenes/enemy.tscn" id="6_p57ef"]
+[ext_resource type="AudioStream" uid="uid://bkt6pj1wk6c3w" path="res://assets/music/time_for_adventure.mp3" id="10_vtaks"]
+[ext_resource type="FontFile" uid="uid://dm58qjkkxqjox" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="11_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iywne"]
 texture = ExtResource("2_yqjtg")
@@ -493,3 +495,16 @@ shape = SubResource("WorldBoundaryShape2D_u5sy4")
 [node name="Enemy" parent="." unique_id=1292669453 instance=ExtResource("6_p57ef")]
 light_mask = 2
 position = Vector2(-72, 24)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=900764618]
+stream = ExtResource("10_vtaks")
+autoplay = true
+
+[node name="Label" type="Label" parent="." unique_id=553085003]
+offset_left = 456.0
+offset_top = -96.0
+offset_right = 668.0
+offset_bottom = -73.0
+theme_override_fonts/font = ExtResource("11_kvpfn")
+text = "Congratulation 
+      now die"
