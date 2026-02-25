@@ -382,39 +382,41 @@ position = Vector2(-136, 32)
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=301541285]
 position = Vector2(58, -12)
 zoom = Vector2(6, 6)
-limit_left = -208
 limit_top = -9999990
 limit_right = 10000021
-limit_bottom = 96
+limit_bottom = 94
 position_smoothing_enabled = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Player/Camera2D" unique_id=303923805]
+[node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=303923805]
+process_mode = 3
+process_priority = 2
+layer = 3
 follow_viewport_enabled = true
 
-[node name="Control" type="Control" parent="Player/Camera2D/CanvasLayer" unique_id=168512899]
+[node name="Control" type="Control" parent="Player/CanvasLayer" unique_id=168512899]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="CoinIcon" type="TextureRect" parent="Player/Camera2D/CanvasLayer/Control" unique_id=1707698543]
+[node name="CoinIcon" type="TextureRect" parent="Player/CanvasLayer/Control" unique_id=1707698543]
 layout_mode = 1
 anchors_preset = -1
-offset_left = -168.0
-offset_top = -32.0
-offset_right = -152.064
-offset_bottom = -16.248001
+offset_left = 504.0
+offset_top = -64.0
+offset_right = 519.93604
+offset_bottom = -48.248
 texture = ExtResource("4_gee14")
 expand_mode = 1
 stretch_mode = 1
 
-[node name="CoinCount" type="Label" parent="Player/Camera2D/CanvasLayer" unique_id=474062220]
+[node name="CoinCount" type="Label" parent="Player/CanvasLayer" unique_id=474062220]
 unique_name_in_owner = true
 anchors_preset = -1
-offset_left = -152.0
-offset_top = -32.0
-offset_right = -128.0
-offset_bottom = -16.0
+offset_left = 520.0
+offset_top = -64.0
+offset_right = 544.0
+offset_bottom = -48.0
 theme_override_colors/font_color = Color(0.13137859, 0.13137859, 0.13137859, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("5_0tnpc")
@@ -481,6 +483,11 @@ position = Vector2(448, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone3" unique_id=1844264278]
 light_mask = 2
+shape = SubResource("WorldBoundaryShape2D_u5sy4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="KillZone3" unique_id=1208869480]
+light_mask = 2
+position = Vector2(88, 0)
 shape = SubResource("WorldBoundaryShape2D_u5sy4")
 
 [node name="Enemy" parent="." unique_id=1292669453 instance=ExtResource("6_p57ef")]
